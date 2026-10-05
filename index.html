@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleBlog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>APNA Blog</h1>
+
+            <button class="menu-button" id="menuButton">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button id="themeButton">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div>
+                <p class="small-title">WELCOME TO SIMPLEBLOG</p>
+                <h2>Ideas, Code and Technology</h2>
+                <p>
+                    Simple articles about programming, technology, AI,
+                    web development and student life.
+                </p>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="section-heading">
+                <h2>Latest Posts</h2>
+                <p>Learn something useful with every post.</p>
+            </div>
+
+            <div class="search-area">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search blog posts..."
+                >
+            </div>
+
+            <div class="categories">
+                <button class="category-button active" data-category="All">All</button>
+                <button class="category-button" data-category="Technology">Technology</button>
+                <button class="category-button" data-category="Programming">Programming</button>
+                <button class="category-button" data-category="AI">AI</button>
+                <button class="category-button" data-category="Web Development">Web Development</button>
+                <button class="category-button" data-category="Student Life">Student Life</button>
+                <button class="category-button" data-category="Coding Tips">Coding Tips</button>
+            </div>
+
+            <div class="posts" id="posts"></div>
+
+            <p class="no-results" id="noResults">
+                No blog posts match your search.
+            </p>
+        </section>
+
+        <section class="about section-box" id="about">
+            <h2>About SimpleBlog</h2>
+            <p>
+                SimpleBlog is a small learning website created for people
+                who enjoy technology, programming and personal growth.
+                The website is made using only HTML, CSS and JavaScript.
+            </p>
+        </section>
+
+        <section class="contact section-box" id="contact">
+            <h2>Contact</h2>
+            <p>
+                Have a question or an idea for a blog post?
+                You can contact us at:
+            </p>
+            <p class="email">hello@simpleblog.local</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 SimpleBlog. Made with HTML, CSS and JavaScript.</p>
+    </footer>
+
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <button class="close-button" id="closeButton">×</button>
+            <span class="post-category" id="modalCategory"></span>
+            <h2 id="modalTitle"></h2>
+            <p class="modal-info" id="modalInfo"></p>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
